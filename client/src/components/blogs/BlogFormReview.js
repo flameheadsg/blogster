@@ -46,7 +46,7 @@ class BlogFormReview extends Component {
 
     const { submitBlog, history, formValues } = this.props;
 
-    submitBlog(formValues, this.state.file, history);
+    submitBlog(formValues, history);
   }
 
   onFileChange(e) {
@@ -59,8 +59,6 @@ class BlogFormReview extends Component {
         <h5>Please confirm your entries</h5>
         {this.renderFields()}
 
-        <h5>Attach an image to your post!</h5>
-        <input type="file" accept="image/*" onChange={this.onFileChange.bind(this)} />
         <br /><br />
 
         {this.renderButtons()}
